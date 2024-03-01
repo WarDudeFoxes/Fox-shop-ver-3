@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fox-Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="Styles/style.css"> -->
+  <link rel="stylesheet" href="Styles/product-link.css">
+</head>
+<body>
+  <header>
+    <div class="section">
+      <div class="left-section">
+        <a href="index.html">
+          <div class="logo">Fox - <span class="logo-span">shop</span></div>
+        </a>
+      </div>
+      <div class="middle-section">
+        <label>
+          <img src="Images/search.png" alt="" class="search-icon">
+          <input type="text" placeholder="Search for Products, Brands and More" class="index-search">
+        </label>
+      </div>
+  
+      <div class="right-section">
+        <a href="#">
+          <div class="account-container">
+            <img src="Images/user.png" alt="">
+            <span>Login</span>
+            <!-- <i class="fa fa-angle-down account-arrow" aria-hidden="true"></i> -->
+          </div>
+        </a>
+  
+        <a href="cart.html">
+          <div class="cart-container">
+            <div class="cart-quantity-cont">
+              <small class="cart-quantity">5</small>
+              <img src="Images/shopping-cart.png" alt="">
+            </div>
+            <span>Cart</span>
+          </div>
+        </a>
+  
+        <div class="seller-container">
+          <img src="Images/shop.png" alt="">
+          <span>Become a Seller</span>
+        </div>
+  
+        <img src="Images/dots.png" alt="" class="help-icon">
+      </div>
+    </div>
+
+    <nav>
+      <div class="middle-section">
+        <label>
+          <img src="Images/search.png" alt="" class="search-icon">
+          <input type="text" placeholder="Search for Products, Brands and More" class="index-search">
+        </label>
+      </div>
+    </nav>
+
+  </header>
+  <!-- <header>
+    <div class="left-section">
+      <a href="index.html">
+        <div class="logo">Fox - <span class="logo-span">shop</span></div>
+      </a>
+    </div>
+    <div class="middle-section">
+      <label>
+        <img src="Images/search.png" alt="" class="search-icon">
+        <input type="text" placeholder="Search for Products, Brands and More">
+      </label>
+    </div>
+
+    <div class="right-section">
+      <div class="account-container">
+        <i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+        <span>Login</span>
+        <i class="fa fa-angle-down account-arrow" aria-hidden="true"></i>
+      </div>
+
+      <div class="cart-container">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <span>Cart</span>
+      </div>
+
+      <div class="seller-container">
+        <span>Become a Seller</span>
+      </div>
+
+      <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+    </div>
+  </header> -->
+
+  <div class="top-categories-container ">
+ 
+  </div>
+
+  <div class="product-container js-product-container"></div>
+
+  <div class="related-products-container">
+    <div class="related-products-header">
+      <h1>You may also like</h1>
+      <div class="see-more">
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="related-product-grid js-related-product-grid"></div>
+  </div>
+
+  <script type="module" src="Scripts/product-link.js"></script>
+</body>
+</html>

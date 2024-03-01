@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: rgba(220, 220, 220, 0.221);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 25px 5%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.89);
+  text-decoration: none;
+}
+
+.logo span {
+  color: rgb(98, 147, 244);
+  /* font-style: italic; */
+}
+
+
+.register {
+  text-decoration: none;
+  color: black;
+  border: 2px black solid;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+img {
+  width: 20px;
+}
+
+.page-content-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+  margin-top: 70px;
+}
+
+.form , .form-personal-details{
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 550px;
+  position: relative;
+  border-bottom: 2px solid gainsboro;
+  padding-bottom: 25px;
+}
+
+.form h2, .form-personal-details h2 {
+  font-weight: 500;
+  margin: 0;
+}
+
+.form label, .form-personal-details label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.form label span, .form-personal-details label span {
+  font-size: .89rem;
+  font-weight: 500;
+}
+
+.form label input, .form-personal-details label input, .form-personal-details label select{
+  padding: 15px;
+  border: gainsboro 1px solid;
+  border-radius: 5px;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.035);
+  background-color: transparent;
+  transition: border .3s;
+}
+
+.form label input:hover, .form-personal-details label input:hover, .form-personal-details label select:hover {
+  border: 1px solid rgba(0, 0, 0, 0.675);
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-options .left-section {
+  display: flex;
+  align-items: center;
+}
+
+.form-options .left-section input {
+
+}
+
+.form-options .left-section span {
+  font-size: .99rem;
+  font-weight: 400;
+}
+
+.form-options a {
+  color: rgba(0, 0, 0, 0.545);
+  font-size: .8rem;
+}
+
+.form button, .form-personal-details button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  transition: filter .3s;
+  cursor: pointer;
+  border: none;
+}
+
+.form button:hover, .form-personal-details button:hover {
+  filter: brightness(.8);
+}
+
+.unknow {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.738);
+  font-size: .8rem;
+}
+
+.or {
+  position: absolute;
+  bottom: -10px;
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 0 3px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  color: rgba(0, 0, 0, 0.626);
+}
+
+.other-sign-up-options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 550px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(0, 0, 0, 0.536);
+  padding: 12px 15px;
+  color: black;
+  text-decoration: none;
+  column-gap: 10px;
+  border-radius: 50px;
+  transition: background-color .3s;
+}
+
+.link:hover {
+  background-color: rgba(220, 220, 220, 0.621);
+}
+
+.link span {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.819);
+}
+
+.other-sign-up-options p {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.other-sign-up-options P a {
+  color: rgb(0, 81, 255);
+}
+
+.register-options {
+  display: flex;
+  justify-content: center;
+}
+
+.register-options span {
+  font-weight: 500;
+}
+
+.register-options a {
+  color: rgb(0, 81, 255);
+  text-decoration: none;
+}
+
+@media (min-width: 451px) and (max-width: 921px) {
+        
+  header {
+    padding: 35px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .register {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+
+  .page-content-cont {
+    margin-top: 180px;
+  }
+
+  .form , .form-personal-details{
+    width: 65%;
+  }
+
+  .form h2, .form-personal-details h2 {
+    font-size: 1.4rem;
+  }
+
+  .other-sign-up-options {
+    width: 65%;
+  }
+
+  .other-sign-up-options p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+        
+  header {
+    padding: 35px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .register {
+    padding: 5px 10px;
+    font-size: .9rem;
+  }
+
+  .page-content-cont {
+    margin-top: 150px;
+  }
+
+  .form , .form-personal-details{
+    width: 85%;
+  }
+
+  .form h2, .form-personal-details h2 {
+    font-size: 1.4rem;
+  }
+
+  .other-sign-up-options {
+    width: 85%;
+  }
+
+  .other-sign-up-options p {
+    font-size: .9rem;
+  }
+}
+
+.hide {
+  display: none;
+}

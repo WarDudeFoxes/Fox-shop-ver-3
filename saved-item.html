@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Items | Fox - shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Styles/account.css">
+    <link rel="stylesheet" href="Styles/saved-item.css">
+  </head>
+  <body>
+    <header>
+      <div class="section">
+        <div class="left-section">
+          <a href="index.html">
+            <div class="logo">Fox - <span class="logo-span">shop</span></div>
+          </a>
+        </div>
+        <div class="middle-section">
+          <label>
+            <img src="Images/search.png" alt="" class="search-icon">
+            <input type="text" placeholder="Search for Products, Brands and More" class="index-search">
+          </label>
+        </div>
+    
+        <div class="right-section">
+          <a href="#">
+            <div class="account-container">
+              <img src="Images/user.png" alt="">
+              <span>Login</span>
+              <!-- <i class="fa fa-angle-down account-arrow" aria-hidden="true"></i> -->
+            </div>
+          </a>
+    
+          <a href="cart.html">
+            <div class="cart-container">
+              <div class="cart-quantity-cont">
+                <small class="cart-quantity">5</small>
+                <img src="Images/shopping-cart.png" alt="">
+              </div>
+              <span>Cart</span>
+            </div>
+          </a>
+    
+          <div class="seller-container">
+            <img src="Images/shop.png" alt="">
+            <span>Become a Seller</span>
+          </div>
+    
+          <img src="Images/dots.png" alt="" class="help-icon">
+        </div>
+      </div>
+  
+      <nav>
+        <div class="middle-section">
+          <label>
+            <img src="Images/search.png" alt="" class="search-icon">
+            <input type="text" placeholder="Search for Products, Brands and More" class="index-search">
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <div class="account-page-container">
+      <div class="saved-item-page-display-cont hide-pop">
+        <div class="links-containter">
+          <div class="link-row row-option">
+            <div class="link-row-icon ">
+              <i class="fa-regular fa-user" aria-hidden="true"></i>
+            </div>
+            <span>My Account</span>
+          </div>
+          <div class="link-row ">
+            <div class="link-row-icon">
+              <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            </div>
+            <span>Orders</span>
+          </div>
+          <div class="link-row">
+            <div class="link-row-icon">
+              <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </div>
+            <span>Saved Items</span>
+          </div>
+          <div class="link-row">
+            <div class="link-row-icon">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            </div>
+            <span>Inbox</span>
+          </div>
+          <div class="link-row">
+            <div class="link-row-icon">
+              <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+            </div>
+            <span>Pending Reviews</span>
+          </div>
+          <div class="link-row">
+            <div class="link-row-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <span>Followed Seller</span>
+          </div>
+          <div class="link-row">
+            <div class="link-row-icon">
+              <i class="fa fa-repeat" aria-hidden="true"></i>
+            </div>
+            <span>Recently Viewed</span>
+          </div>
+          <div class=" logout">
+            <span>LOGOUT</span>
+          </div>
+        </div>
+  
+        <div class="saved-items-content-container">
+          <div class="save-item-header">
+            <a href="account.html" class="account-link">
+              <i class="fa fa-arrow-left"></i>
+            </a>
+            <span class="save-items-length"></span>
+          </div>
+          <div class="empty-cart hide emthy-saved-cart">
+            <img src="Images/emthy-cart.webp" alt="">
+            <span>No saved item yet!</span>
+            <small>Browse our categories discover our best deals!</small>
+            <a href="index.html">Add Items</a>
+          </div>
+          <div class="saved-item-product-container"></div>
+        </div>
+
+      </div>
+      <div class="customer-views-cont">
+        <div class="customer-views-header">
+          <span>
+            Customers with your views also viewed this
+          </span>
+        </div>
+  
+        <div class="customer-views-product-grid"></div>
+      </div>
+    </div>
+
+    <script type="module" src="Scripts/save-items.js"></script>
+  </body>
+</html>

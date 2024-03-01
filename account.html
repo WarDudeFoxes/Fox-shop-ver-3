@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account | Fox - shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="Styles/saved-item.css">
+  <link rel="stylesheet" href="Styles/account.css">
+</head>
+<body>
+  <header>
+    <div class="section">
+      <div class="left-section">
+        <a href="index.html">
+          <div class="logo">Fox - <span class="logo-span">shop</span></div>
+        </a>
+      </div>
+      <div class="middle-section">
+        <label>
+          <img src="Images/search.png" alt="" class="search-icon">
+          <input type="text" placeholder="Search for Products, Brands and More" class="index-search">
+        </label>
+      </div>
+  
+      <div class="right-section">
+        <a href="#">
+          <div class="account-container">
+            <img src="Images/user.png" alt="">
+            <span>Login</span>
+            <!-- <i class="fa fa-angle-down account-arrow" aria-hidden="true"></i> -->
+          </div>
+        </a>
+  
+        <a href="cart.html">
+          <div class="cart-container">
+            <div class="cart-quantity-cont">
+              <small class="cart-quantity">5</small>
+              <img src="Images/shopping-cart.png" alt="">
+            </div>
+            <span>Cart</span>
+          </div>
+        </a>
+  
+        <div class="seller-container">
+          <img src="Images/shop.png" alt="">
+          <span>Become a Seller</span>
+        </div>
+  
+        <img src="Images/dots.png" alt="" class="help-icon">
+      </div>
+    </div>
+
+    <nav>
+      <div class="middle-section">
+        <label>
+          <img src="Images/search.png" alt="" class="search-icon">
+          <input type="text" placeholder="Search for Products, Brands and More" class="index-search">
+        </label>
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="account-page-container">
+    <div class="saved-item-page-display-cont hide-pop">
+      <div class="links-containter">
+        <div class="link-row row-option">
+          <div class="link-row-icon ">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+          </div>
+          <span>My Account</span>
+        </div>
+        <div class="link-row ">
+          <div class="link-row-icon">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+          </div>
+          <span>Orders</span>
+        </div>
+        <a class="link-row" href="saved-item.html">
+          <div class="link-row-icon">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+          </div>
+          <span>Saved Items</span>
+        </a>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          </div>
+          <span>Inbox</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+          </div>
+          <span>Pending Reviews</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <span>Followed Seller</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fa fa-repeat" aria-hidden="true"></i>
+          </div>
+          <span>Recently Viewed</span>
+        </div>
+        <span class="logout">LOGOUT</span>
+      </div>
+  
+      <div class="account-overview-cont">
+        <div class="overview-header">
+          <h3>Account Overview</h3>
+        </div>
+        <div class="account-overview-content">
+          <div class="account-details-cont">
+            <div class="account-details-header">
+              <span>ACCOUNT DETAILS</sapn>
+            </div>
+            <div class="account-details-content">
+              <div class="account-name">
+                <span>Ganiu Waris</span>
+              </div>
+              <div class="account-email">
+                <span>wardude704@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="address-book-cont">
+            <div class="address-book-header">
+              <span>ADDRESS BOOK</span>
+            </div>
+            <div class="address-book-content">
+              <div class="address-title">
+                <span>Your default shipping address:</span>
+              </div>
+              <div class="address-note">
+                <span>Shipping address not available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customer-views-cont">
+      <div class="customer-views-header">
+        <h3>
+         Other customers past views
+        </h3>
+      </div>
+
+      <div class="customer-views-product-grid"></div>
+    </div>
+    <div class="logout">
+      <button class="">Log out</button>
+    </div>
+  </div>
+
+  <script type="module" src="Scripts/account.js"></script>
+</body>
+</html>

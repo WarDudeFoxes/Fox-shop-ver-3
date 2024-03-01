@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: rgba(220, 220, 220, 0.221);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 30px 3%;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  row-gap: 5px;
+  right: 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: none;
+}
+
+
+.left-section {
+  width: fit-content;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.89);
+}
+
+.logo-span {
+  color: rgb(98, 147, 244);
+  /* font-style: italic; */
+}
+
+.middle-section {
+  width: 35%;
+}
+
+.middle-section label {
+  background-color: rgba(220, 220, 220, 0.215);
+  display: flex;
+  /* rgba(98, 147, 244, 0.05) */
+  align-items: center;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.middle-section label img {
+  width: 25px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.middle-section label input {
+  border: none;
+  background-color: transparent;
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+}::placeholder {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.right-section {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-section img {
+  width: 20px;
+}
+
+.account-container, .cart-container, .seller-container, .help-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  column-gap: 10px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: background-color .4s;
+}
+
+.account-container:hover, .cart-container:hover, .seller-container:hover, .help-icon:hover  {
+  background-color: rgba(220, 220, 220, 0.4);
+}
+
+
+.cart-quantity-cont {
+  position: relative;
+}
+
+.cart-quantity-cont small {
+  position: absolute;
+  top: -15px;
+  width: 24px;
+  height: 24px;
+  right: -12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  border-radius: 12px;
+  background-color: rgba(98, 147, 244, .8);
+}
+
+.account-container span , .cart-container span, .seller-container span {
+  font-size: 1.1rem;
+  font-weight: 450;
+  color: rgba(0, 0, 0, 0.81);
+}
+
+.products-grid-container {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 2% 10px 2%;
+  padding-bottom: 30px;
+  align-items: center;
+
+  border-bottom:  1px solid gainsboro;
+}
+
+.products-grid-container h1 {
+  color: rgba(0, 0, 0, 0.777);
+}
+
+.product-search-option {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filter-container {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  border: 1px solid rgb(183, 183, 183);
+  padding: 10px 10px;
+  border-radius: 55px;
+  cursor: pointer;
+}
+
+.filter-container img {
+  width: 18px;
+}
+
+.filter-container span {
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+.sort-container {
+  display: flex;
+  align-self: center;
+  column-gap: 10px;
+  border: 1px solid rgb(183, 183, 183);
+  padding: 10px 12px;
+  border-radius: 55px;
+  cursor: pointer;
+}
+
+.sort-text {
+  font-weight: 300;
+  font-size: .8rem;
+}
+
+.sort-type {
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.sort-container img {
+  width: 15px;
+}
+
+.products-grid {
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border: 1px solid white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border .1s;
+}
+
+.product-container:hover {
+  border: 1px solid rgb(220, 220, 220);
+  /* border: 1px solid  rgba(98, 147, 244, 0.51); */
+}
+
+.product-container .like-container {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.523);
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 19px;
+  transition: background-color .4s;
+}
+
+.product-container .like-container:hover {
+  background-color: white;
+}
+
+.product-container .product-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-container .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: .86rem;
+  color: rgba(0, 0, 0, 0.707);
+  -webkit-box-orient: vertical;
+}
+
+.product-container .product-details {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.product-container .product-details .price {
+  /* color: rgb(98, 147, 244); */
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.product-container .product-details .sold-rate {
+  font-size: .8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+footer h4 {
+  margin: 0;
+}
+
+.related-products-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 3%
+}
+
+.related-products {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  column-gap: 20px;
+}::-webkit-scrollbar {
+  display: none;
+}
+
+.related-product {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  align-items: start;
+  transition: box-shadow .4s;
+  border-radius: 13px;
+}
+
+.related-product:hover {
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.related-product .fa-heart {
+  position: absolute;
+  padding: 9px;
+  font-size: .99rem;
+  color: rgba(0, 0, 0, 0.81);
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.544);
+  right: 12px;
+  top: 12px;
+  transition: box-shadow .4s;
+}
+
+.related-product .fa-heart:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.related-product-img-cont {
+  border: 1px solid gainsboro;
+  padding: 10px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+.related-product img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.related-product-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: .83rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.821);
+  -webkit-box-orient: vertical;
+}
+
+.related-product-price {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.add-to-cart {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 2px solid ;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0px , 4px, 8px , rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: .9rem;
+  width: 100%;
+}
+
+.favorites-question {
+
+}
+
+.favorites-link {
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.852);
+  border-radius: 50px;
+  transition: background-color .4s;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.favorites-link:hover {
+  background-color: gainsboro;
+}
+
+@media (min-width: 451px) and (max-width: 921px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 15px 3%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    row-gap: 5px;
+    right: 0;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+  
+  .left-section {
+    width: fit-content;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.89);
+  }
+  
+  .section .middle-section {
+    display: none;
+  }
+  
+  .right-section {
+    width: fit-content;
+  }
+  
+  .right-section img {
+    width: 25px;
+  }
+  
+  .seller-container, .help-icon {
+    display: none;
+  }
+
+  nav .middle-section {
+    width: 90%;
+  }
+
+  nav .middle-section label {
+    background-color: rgba(220, 220, 220, 0.3);
+    border-radius: 20px;
+  }
+  
+  nav .middle-section label img {
+    width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .middle-section label input {
+    border: none;
+    background-color: transparent;
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2rem;
+    outline: none;
+  }::placeholder {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .account-container span , .cart-container span, .seller-container span {
+    display: none;
+  }
+
+  .fa-heart {
+    color: rgba(255, 0, 0, 0.532);
+  }
+  
+  .products-grid-container {
+    display: flex;
+    flex-direction: column;
+    margin: 130px 2% 10px 2%;
+    padding-bottom: 30px;
+    align-items: center;
+    border-bottom:  1px solid gainsboro;
+  }
+
+  .products-grid-container h2 {
+    color: rgba(0, 0, 0, 0.777);
+    display: flex;
+  }
+
+  .product-search-option {
+    display: none;
+  }
+
+  .products-grid {
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .product-container .product-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .product-container .product-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .related-product img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 450px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 15px 3%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    row-gap: 5px;
+    right: 0;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+  
+  .left-section {
+    width: fit-content;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.89);
+  }
+  
+  .section .middle-section {
+    display: none;
+  }
+  
+  .right-section {
+    width: fit-content;
+  }
+  
+  .right-section img {
+    width: 25px;
+  }
+  
+  .seller-container, .help-icon {
+    display: none;
+  }
+
+  nav .middle-section {
+    width: 90%;
+  }
+
+  nav .middle-section label {
+    background-color: rgba(220, 220, 220, 0.3);
+    border-radius: 20px;
+  }
+  
+  nav .middle-section label img {
+    width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .middle-section label input {
+    border: none;
+    background-color: transparent;
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2rem;
+    outline: none;
+  }::placeholder {
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .account-container span , .cart-container span, .seller-container span {
+    display: none;
+  }
+
+  .fa-heart {
+    color: rgba(255, 0, 0, 0.532);
+  }
+  
+  .products-grid-container {
+    display: flex;
+    flex-direction: column;
+    margin: 130px 2% 10px 2%;
+    padding-bottom: 30px;
+    align-items: center;
+    border-bottom:  1px solid gainsboro;
+  }
+
+  .products-grid-container h2 {
+    color: rgba(0, 0, 0, 0.777);
+    display: flex;
+  }
+
+  .product-search-option {
+    display: none;
+  }
+
+  .products-grid {
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-container .product-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .product-container .product-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  .related-product img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .related-product .fa-heart {
+    padding:  9px;
+    font-size: 1rem;
+    border-radius: 18px;
+  }
+}
+
+.hide {
+  display: none;
+}

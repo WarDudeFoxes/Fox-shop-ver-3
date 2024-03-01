@@ -1,0 +1,194 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+.account-overview-cont {
+  flex: 1;
+  height: initial;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.overview-header h3{
+  margin: 0;
+  opacity: .8;
+}
+
+.account-overview-content {
+  display: grid;
+  height: 100%;
+  margin-top: 10px;
+  column-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.account-details-cont, .address-book-cont {
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  height: initial;
+}
+
+.account-details-header, .address-book-header {
+  border-bottom: 1px gainsboro solid;
+  padding: 15px 10px;
+}
+
+.account-details-header span, .address-book-header span {
+  opacity: .7;
+}
+
+.account-details-content, .address-book-content {
+  padding: 15px 10px;
+}
+
+.account-name span, .address-title span {
+  font-weight: 600;
+  font-size: .9rem;
+  opacity: .8;
+}
+
+.account-email span , .address-note span{
+  font-size: .75rem;
+  opacity: .7;
+}
+
+.pop-links-container{
+  display: none;
+}
+
+.customer-views-cont {
+  /* margin-bottom: -10px; */
+  margin-top: 10px;
+}
+
+.logout {
+  display: none;
+}
+
+@media (min-width: 451px) and (max-width: 921px) {
+  .account-overview-cont {
+    flex: 1;
+    height: initial;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .overview-header h3{
+    margin: 0;
+    opacity: .8;
+  }
+  
+  .account-overview-content {
+    row-gap: 15px;
+    column-gap: 0px;
+    grid-template-columns: 1fr;
+    height: 500px;
+
+  }
+
+  .account-name span, .address-title span {
+    font-weight: 600;
+    font-size: 1rem;
+    opacity: .8;
+  }
+  
+  .account-email span , .address-note span{
+    font-size: .9rem;
+    opacity: .7;
+  }
+  
+  .pop-links-container{
+    display: none;
+  }
+  
+  .customer-views-cont {
+    margin-top: 10px;
+  }
+
+  .logout {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logout button {
+    width: 100%;
+    /* background-color: rgba(98, 147, 244, .5); */
+    border: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 450px) {
+  .account-overview-cont {
+    flex: 1;
+    height: initial;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .overview-header h3{
+    margin: 0;
+    opacity: .8;
+  }
+  
+  .account-overview-content {
+    row-gap: 15px;
+    column-gap: 0px;
+    grid-template-columns: 1fr;
+  }
+
+  .account-name span, .address-title span {
+    font-weight: 600;
+    font-size: .95rem;
+    opacity: .8;
+  }
+  
+  .account-email span , .address-note span{
+    font-size: .85rem;
+    opacity: .7;
+  }
+  
+  .pop-links-container{
+    display: none;
+  }
+  
+  .customer-views-cont {
+    margin-top: 10px;
+  }
+  .logout {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logout button {
+    width: 100%;
+    /* background-color: rgba(98, 147, 244, .5); */
+    border: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding: 20px;
+    cursor: pointer;
+  }
+}
+
+.hide {
+  display: none;
+}

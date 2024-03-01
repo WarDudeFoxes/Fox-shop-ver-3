@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Fox - shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="Styles/register.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <div class="logo">
+        Fox - <span>shop</span>
+      </div>
+    </a>
+
+    <a href="login.html" class="register">Login</a>
+  </header>
+  <div class="page-content-cont">
+    <div class="form hie">
+      <h2>Register an Account</h2>
+      <label>
+        <span>Email address</span>
+        <input type="email" class="email">
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" class="password">
+      </label>
+      <label>
+        <span>Confirm Password</span>
+        <input type="password" class="confirm-password">
+      </label>
+
+      <button class="continue">Continue</button>
+      <a href="#" class="unknow">Troble registering an account?</a>
+      <span class="or">OR</span>
+    </div>
+
+    <div class="form-personal-details hide">
+      <h2>Personal Details</h2>
+      <label>
+        <span>First Name</span>
+        <input type="text" class="first-name">
+      </label>
+      <label>
+        <span>Last Name</span>
+        <input type="text" class="last-name">
+      </label>
+      <label for="">     
+        <span>Gender</span>
+        <select class="gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label>
+      <div class="register-options">
+        <input type="checkbox" name="" id="" class="check">
+        <span>I read and consented to the <a href="#">Terms and Conditions</a></span>
+      </div>
+      <button class="register-btn">Register</button>
+      <span class="or">OR</span>
+    </div>
+    <div class="other-sign-up-options">
+      <a href="#" class="link">
+        <img src="Images/search(2).png" alt="">
+        <span>Continue with Google</span>
+      </a>
+      <a href="#" class="link">
+        <img src="Images/facebook.png" alt="">
+        <span>Continue with Facebook</span>
+      </a>
+      <a href="#" class="link">
+        <img src="Images/apple.png" alt="">
+        <span>Continue with Apple</span>
+      </a>
+      <p>By clicking Continue with Google, Facebook, or Apple, you agree to Fox - shop's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+    </div>
+  </div>
+
+  <script type="module" src="Scripts/register.js"></script>
+</body>
+</html>
