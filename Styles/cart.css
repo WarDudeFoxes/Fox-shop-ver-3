@@ -1037,7 +1037,7 @@ footer h4 {
   
   .emthy-cart-cont {
     margin: 80px 0 0 0;
-    height: 45vh;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1206,9 +1206,6 @@ footer h4 {
   .related-product-name {
     width: 130px;
   }
-
-  
-
   
 }
 
