@@ -8,7 +8,6 @@ import { addItemToLists, saveWishToStorage, savedItems } from "./Data/like-data.
 import { updateWishListDisplay } from "./Controller/wish-list-controller.js";
 import { calculateCartQuantity } from "./Controller/cart-quantity-update.js";
 
-
 updateUserDetails();
 searchController();
 let productMatch;
@@ -151,6 +150,15 @@ document.querySelectorAll('.fa-heart')
       saveWishToStorage();
       updateWishListDisplay();
       console.log(savedItems);
+    })
+  })
+
+  document.querySelectorAll('.like-btn').forEach(elem => {
+    elem.addEventListener('click', () => {
+  
+      if (!browerData) {
+        window.location.href = 'login.html'
+      }
     })
   })
 

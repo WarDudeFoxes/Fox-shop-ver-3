@@ -1,7 +1,4 @@
-export let carts = JSON.parse(localStorage.getItem('fox-shopCart-ver3')) || [{
-  quantity: 1,
-  id: 'nbncbnplpalzmaadddcdcdcndcn'
-}];
+export let carts = JSON.parse(localStorage.getItem('fox-shopCart-ver3')) || [];
 
 
 export function addToCart(id) {

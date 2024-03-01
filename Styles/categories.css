@@ -245,6 +245,17 @@ nav {
   font-size: .85rem;
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+}
+
+.flex h1 {
+  width: 100%;
+  text-align: center;
+}
+
 
 @media (min-width: 451px) and (max-width: 921px) {
   header {
@@ -436,9 +447,18 @@ nav {
   .category-product-container span {
     color: rgba(0, 0, 0, 0.645);
     font-size: .85rem;
-  }  
+  }  .flex {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+  }
   
+  .flex h1 {
+    width: 100%;
+    text-align: center;
+  }  
 }
+
 @media (max-width: 450px) {
   header {
     display: flex;
@@ -629,6 +649,16 @@ nav {
   .category-product-container span {
     color: rgba(0, 0, 0, 0.645);
     font-size: .85rem;
-  }  
+  }  .flex {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+  }
+  
+  .flex h1 {
+    width: 100%;
+    text-align: center;
+  }
+  
   
 }
