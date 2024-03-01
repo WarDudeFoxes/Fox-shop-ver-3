@@ -33,5 +33,5 @@ export function removeFromCart(id) {
 };
 
 export function saveCartToStorage() {
-  localStorage.setItem('fox-shopCart-ver3', JSON.stringify(carts))
+  localStorage.setItem('fox-shopCart-ver3-0', JSON.stringify(carts))
 };

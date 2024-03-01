@@ -26,7 +26,7 @@ document.querySelector('.login')
       if (detailsMatch) {
         browerData = (email.value).toLowerCase()
         saveBrowerData();
-        window.location.href = 'index.html'
+        window.location.href = 'account.html'
       } else {
         email.focus()
         password.value = ''
