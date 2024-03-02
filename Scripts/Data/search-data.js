@@ -1,4 +1,4 @@
-export let searchValue = JSON.parse(localStorage.getItem('search-value'))
+export let searchValue = JSON.parse(localStorage.getItem('search-value')) || []
 
 
 export function saveSearchValue() {
