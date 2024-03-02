@@ -124,14 +124,12 @@ nav {
 .cart-quantity-cont small {
   position: absolute;
   top: -15px;
-  width: 24px;
-  height: 24px;
   right: -12px;
-  text-align: center;
+  padding: 3px 7px;
   font-weight: 600;
   font-size: 1rem;
   color: white;
-  border-radius: 12px;
+  border-radius: 20px;
   background-color: rgba(98, 147, 244, .8);
 }
 
