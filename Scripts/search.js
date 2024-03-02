@@ -7,29 +7,38 @@ import { updateWishListDisplay } from "./Controller/wish-list-controller.js";
 import { calculateCartQuantity } from "./Controller/cart-quantity-update.js";
 
 
-document.querySelector('.search-icon').addEventListener('click', () => {
-  let inputEl = document.querySelector('.page-search');
+document.querySelectorAll('.search-icon')
+  .forEach(elem => {
+    elem.addEventListener('click', () => {
+      let inputEl = document.querySelectorAll('.index-search');
 
-     
-  if (inputEl.value) {
-    searchValue[0] = inputEl.value
-    saveSearchValue();
-    window.location.href = 'product-search.html'
-  };
+      inputEl.forEach(elem => {
+        if (elem.value) {
+          searchValue[0] = elem.value
+          saveSearchValue();
+          window.location.href = 'product-search.html'
+        };
+      })
+    })
 });
 
-document.querySelector('input').addEventListener('keyup', (ev) => {
-  if (ev.key === 'Enter') {
-        
-    let inputEl = document.querySelector('.page-search');
+document.querySelectorAll('input')
+  .forEach(elem => {
+    elem.addEventListener('keyup', (ev) => {
+      if (ev.key === 'Enter') {
+            
+        let inputEl = document.querySelectorAll('.index-search');
     
-    if (inputEl.value) {
-      searchValue[0] = inputEl.value;
-      saveSearchValue();
-      window.location.href = 'product-search.html';
-    };
-  };
-});
+          inputEl.forEach(elem => {
+            if (elem.value) {
+              searchValue[0] = elem.value
+              saveSearchValue();
+              window.location.href = 'product-search.html'
+            };
+          })
+      };
+    });
+  })
 
 
 document.querySelector('input').value = searchValue[0].toLowerCase()
