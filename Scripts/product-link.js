@@ -147,10 +147,14 @@ document.querySelectorAll('.fa-heart')
   .forEach(elem => {
     elem.addEventListener('click', () => {
       const id = elem.dataset.id
-      addItemToLists(id);
-      saveWishToStorage();
-      updateWishListDisplay();
-      console.log(savedItems);
+      if (browerData) {
+        addItemToLists(id);
+        saveWishToStorage();
+        updateWishListDisplay();
+        console.log(savedItems);
+      } else {
+        window.location.href = 'login.html'
+      }
     })
   })
 
