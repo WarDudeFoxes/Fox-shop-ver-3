@@ -11,7 +11,7 @@ export function searchController() {
           searchValue[0] = elem.value
           console.log(searchValue[0]);
           saveSearchValue();
-          // window.location.href = 'product-search.html'
+          window.location.href = 'product-search.html'
         }
       })
     })
