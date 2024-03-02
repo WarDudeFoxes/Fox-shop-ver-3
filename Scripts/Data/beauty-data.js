@@ -1,4 +1,4 @@
-export const beautyData = [{
+export let beautyData = [{
   name: 'Enigmatic Essence For Him',
   priceCent: 9000,
   discountPriceCent: 4500,

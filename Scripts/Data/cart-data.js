@@ -1,4 +1,17 @@
-export let carts = JSON.parse(localStorage.getItem('fox-shopCart-ver3-0')) || [];
+import { browerData } from "../Account-Data/brower-user-data.js";
+import { registerData } from "../Account-Data/register-data.js";
+
+let infoMatch;
+registerData.forEach(info => {
+  if (info.email  === browerData) {
+    infoMatch = info
+  }; 
+});
+
+let savedLogItem = browerData ? infoMatch.password
+: '';
+
+export let carts = JSON.parse(localStorage.getItem(savedLogItem)) || [];
 
 
 export function addToCart(id) {
@@ -21,6 +34,8 @@ export function addToCart(id) {
   saveCartToStorage();
 };
 
+
+
 export function removeFromCart(id) {
   let newCart = [];
   carts.forEach(cartItem => {
@@ -33,5 +48,5 @@ export function removeFromCart(id) {
 };
 
 export function saveCartToStorage() {
-  localStorage.setItem('fox-shopCart-ver3-0', JSON.stringify(carts))
+  localStorage.setItem(savedLogItem, JSON.stringify(carts))
 };

@@ -1,4 +1,4 @@
-export const accessoriesData = [{
+export let accessoriesData = [{
   name: 'Cresent Moon ramadan Kareem Islamic Eid design scarf, muslim ramadan gift shawl, arabic blanket',
   priceCent: 800,
   discountPriceCent: 600,

@@ -514,6 +514,13 @@ nav {
   font-weight: 400;
 }
 
+.price-percentage {
+  margin-left: 10px;
+  position: absolute;
+  right: 2px;
+  bottom: 0;
+}
+
 @media (min-width: 451px) and (max-width: 921px) {
   header {
     display: flex;

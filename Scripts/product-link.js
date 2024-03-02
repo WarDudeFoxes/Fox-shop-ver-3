@@ -11,7 +11,7 @@ import { calculateCartQuantity } from "./Controller/cart-quantity-update.js";
 updateUserDetails();
 searchController();
 let productMatch;
-console.log(productLinkData);
+
 
 allProducts.forEach(product => {
   if (productLinkData.id === product.id) {
@@ -117,7 +117,8 @@ document.querySelector('.js-related-product-grid')
         <div class="related-product-name">${product.name}</div>
         <div class="related-product-price">
           <div class="discount-price">USD ${(product.discountPriceCent/100).toFixed(2)}</div>
-          <span class="related-price">USD ${(product.priceCent/100).toFixed(2)}</span> <span class="price-percentage">(30% off)</span>
+          <span class="related-price">USD ${(product.priceCent/100).toFixed(2)}</span> 
+          <span class="price-percentage">${product.soldNum} Sold</span>
         </div>
       </div>
     </a>

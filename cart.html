@@ -73,7 +73,7 @@
 
     <div class="carts-summary">
       <div class="cart-products-cont"></div>
-      <div class="checkout-section">
+      <div class="checkout-section js-checkout-section">
         <div class="payment-section">
           <span class="payment-section-title">How you'll pay</span>
           <div class="method">
@@ -83,8 +83,8 @@
         </div>
         <div class="checkout-price">
           <div class="price-line">
-            <div class="price-type">Items total</div>
-            <div class="price">USD 14.20</div>
+            <div class="price-type"></div>
+            <div class="total-price"></div>
           </div>
           <div class="price-line">
             <div class="price-type">Shipping</div>
@@ -92,10 +92,12 @@
           </div>
         </div>
         <div class="total-cont">
-          <div class="item-count">Total (2 items)</div>
-          <div class="total-price">USD 14.20</div>
+          <div class="item-count"></div>
+          <div class="total-price"></div>
         </div>
-        <button class="checkout">Proceed to checkout</button>
+        <button class="checkout" onclick="
+          alert('Checkout not available \nPlease try again later')
+        ">Proceed to checkout</button>
       </div>
     </div>
   </div>

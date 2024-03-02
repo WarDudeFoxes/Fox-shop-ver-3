@@ -10,6 +10,7 @@ import { allProducts } from "./all-product.js";
 updateUserDetails();
 searchController();
 updateCartPage();
+
 function updateCartPage() {
 
   document.querySelector('.cart-products-cont')
@@ -30,7 +31,7 @@ function updateCartPage() {
               <div class="cart-product-name">
                 ${productMatch.name}
               </div>
-              <select data-id="${productMatch.id}">
+              <select disabled data-id="${productMatch.id}" class="cart-drop-down-${productMatch.id} cart-drop-down">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -52,7 +53,36 @@ function updateCartPage() {
         </div>
       `
     }).join('');
-  
+
+
+  document.querySelectorAll('.cart-drop-down')
+    .forEach(elem => {
+      const id = elem.dataset.id
+      carts.forEach(cart => {
+        if (id === cart.id) {
+          document.querySelector(`.cart-drop-down-${id}`).value = cart.quantity
+        }
+      })
+    })
+
+  let price = 0.00
+  carts.forEach(cart => {
+    allProducts.forEach(product => {
+      if (cart.id === product.id) {
+        const total = (product.discountPriceCent/100) * cart.quantity;
+
+        price+=total
+      }
+    })
+  })
+
+  document.querySelectorAll('.total-price')
+    .forEach(elem => {
+      elem.innerHTML = `USD ${price.toFixed(2)}`;
+    });
+    
+
+
   document.querySelector('.related-products')
     .innerHTML = allProducts.map(({displayImage, name, discountPriceCent, id}) => {
       return `
@@ -79,20 +109,32 @@ function updateCartPage() {
         .classList.remove('hide')
       document.querySelector('.available-cart-cont')
         .classList.add('hide')
-    } else  if (carts.length === 1) {
+      document.querySelector('.item-count')
+        .innerHTML = `No item`
+      document.querySelector('.price-type')
+        .innerHTML = `Item total`
+    } else if (carts.length === 1) {
       document.querySelector('.cart-product-title')
         .innerHTML = `${carts.length} item in your cart`
-        document.querySelector('.emthy-cart-cont')
-        .classList.add('hide')
+      document.querySelector('.emthy-cart-cont')
+      .classList.add('hide');
       document.querySelector('.available-cart-cont')
-        .classList.remove('hide') 
+        .classList.remove('hide');
+      document.querySelector('.item-count')
+        .innerHTML = `Total (1 item)`;
+      document.querySelector('.price-type')
+        .innerHTML = `Item total`;
     } else if (carts.length >1) {
       document.querySelector('.cart-product-title')
       .innerHTML = `${carts.length} items in your cart` 
       document.querySelector('.emthy-cart-cont')
       .classList.add('hide')
-    document.querySelector('.available-cart-cont')
+      document.querySelector('.available-cart-cont')
       .classList.remove('hide')
+      document.querySelector('.item-count')
+        .innerHTML = `Total (2 items)`
+      document.querySelector('.price-type')
+      .innerHTML = `Items total`
     }
   
   document.querySelectorAll('.js-remove')
@@ -104,9 +146,15 @@ function updateCartPage() {
         removeFromCart(id);
         saveCartToStorage();
         productCont.remove();
+        calculateCartQuantity();
         updateCartPage();
       });
     });
+
+  document.querySelector('.checkout').addEventListener('click', {
+    
+  })
+
 }
 
 document.querySelectorAll('.related-product')

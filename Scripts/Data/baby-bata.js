@@ -1,4 +1,4 @@
-export const babyData = [{
+export let babyData = [{
   name: 'Alpaca Fur Alpaca Plush Very Soft and Cute Bolivian Peruvian Alpaca stuffed animal',
   priceCent: 900,
   discountPriceCent: 500,
