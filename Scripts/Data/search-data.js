@@ -1,6 +1,6 @@
-export let searchValue = JSON.parse(localStorage.getItem('search-value')) || []
+export let searchValue = JSON.parse(localStorage.getItem('searchValue')) || ['']
 
 
 export function saveSearchValue() {
-  localStorage.setItem('search-value', JSON.stringify(searchValue))
+  localStorage.setItem('searchValue', JSON.stringify(searchValue))
 }

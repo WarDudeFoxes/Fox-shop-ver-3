@@ -4,13 +4,14 @@ export function searchController() {
   document.querySelectorAll('.search-icon').forEach(elem => {
     elem.addEventListener('click', () => {
       let inputEl = document.querySelectorAll('.index-search')
-      console.log('ok');
        
       inputEl.forEach(elem => {
         if (elem.value) {
+          console.log(searchValue);
           searchValue[0] = elem.value
+          console.log(searchValue[0]);
           saveSearchValue();
-          window.location.href = 'product-search.html'
+          // window.location.href = 'product-search.html'
         }
       })
     })
